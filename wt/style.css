@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(76, 75, 77, 0.563);
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 70%;
+    padding: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button[type="submit"],
+input[type="submit"] {
+    background-color: rgb(76, 83, 175);
+    color: #170b0b;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+legend {
+    font-weight: bold;
+}
+
+span {
+    color: red;
+    margin-left: 5px;
+}

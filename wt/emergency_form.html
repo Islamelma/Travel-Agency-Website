@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Assistance Form</title>
+</head>
+<body>
+    <h1>Emergency Assistance Form</h1>
+
+    <form action="emergency_process.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <?php if (isset($errors['name'])) { echo "<span style='color:red;'>{$errors['name']}</span>"; } ?>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" required>
+        <?php if (isset($errors['phone'])) { echo "<span style='color:red;'>{$errors['phone']}</span>"; } ?>
+
+        <label for="emergency_type">Emergency Type:</label>
+        <select name="emergency_type" required>
+            <option value="" disabled selected>Select an emergency type</option>
+            <option value="medical">Medical</option>
+            <option value="accident">Accident</option>
+            <option value="other">Other</option>
+        </select>
+        <?php if (isset($errors['emergency_type'])) { echo "<span style='color:red;'>{$errors['emergency_type']}</span>"; } ?>
+
+        <label for="details">Details:</label>
+        <textarea name="details" required></textarea>
+        <?php if (isset($errors['details'])) { echo "<span style='color:red;'>{$errors['details']}</span>"; } ?>
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
